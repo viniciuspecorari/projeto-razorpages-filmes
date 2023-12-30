@@ -1,0 +1,54 @@
+﻿@page
+@model Aula_31_RazorPages_Filmes_8.Pages.Filmes.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Filmes</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Filmes.Titulo" class="control-label"></label>
+                <input asp-for="Filmes.Titulo" class="form-control" />
+                <span asp-validation-for="Filmes.Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Filmes.DatLancamento" class="control-label"></label>
+                <input asp-for="Filmes.DatLancamento" class="form-control" />
+                <span asp-validation-for="Filmes.DatLancamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Filmes.Genero" class="control-label"></label>
+                <input asp-for="Filmes.Genero" class="form-control" />
+                <span asp-validation-for="Filmes.Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Filmes.Preco" class="control-label"></label>
+                <input asp-for="Filmes.Preco" class="form-control" />
+                <span asp-validation-for="Filmes.Preco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Filmes.Pontos" class="control-label"></label>
+                <input asp-for="Filmes.Pontos" class="form-control" />
+                <span asp-validation-for="Filmes.Pontos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
